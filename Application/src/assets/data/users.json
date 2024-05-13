@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Dani",
+    "email": "dani@gmail.com",
+    "password": "123",
+    "reservations": []
+  },
+  {
+    "id": 2,
+    "name": "Test",
+    "email": "123",
+    "password": "123",
+    "reservations": []
+  }
+]
