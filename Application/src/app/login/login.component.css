@@ -9,7 +9,7 @@
 }
 
 img {
-  width: 950px;
+  width: 750px;
   object-fit: cover;
 }
 
@@ -23,14 +23,13 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  width: 50%;
+  gap: 1rem;
   margin-bottom: 6rem;
 }
 
 h1 {
-  font-size: 48px;
-  margin-bottom: 0.5rem !important;
+  font-size: 32px;
+  margin: 0 !important;
 }
 
 .form-field {
@@ -71,6 +70,7 @@ a {
 
 p {
   text-align: center;
+  margin: 0 !important;
 }
 
 mat-icon {
@@ -82,5 +82,5 @@ mat-icon {
 
 .error-box {
   position: absolute;
-  top: 85%;
+  top: 87%;
 }
