@@ -1,0 +1,28 @@
+<div class="login">
+  <div class="login-container">
+    <img src="assets/images/loginImage.svg" alt="poster">
+    <form novalidate (ngSubmit)="login(f)" #f="ngForm">
+      <div class="form-container">
+        <h1>Здравейте отново!</h1>
+        <div class="form-field">
+          <label for="email">Имейл</label>
+          <input type="email" id="email" name="email" placeholder="Въведете имейл"
+            [ngClass]="{ 'has-error': emailField.invalid && emailField.touched }"
+            [(ngModel)]="loginModel.email" #emailField="ngModel" required>
+          <small *ngIf="emailField.errors && emailField.touched" class="error">Имейл е задължително поле</small>
+        </div>
+        <div class="form-field">
+          <label for="pass">Парола</label>
+          <input [type]="passHidden ? 'password' : 'text'" id="pass" name="pass" placeholder="Въведете парола"
+            [ngClass]="{ 'has-error': passField.invalid && passField.touched }"
+            [(ngModel)]="loginModel.password" #passField="ngModel" required>
+          <mat-icon class="pos-abs pass-toggle pointer" (click)="passHidden = !passHidden">remove_red_eye</mat-icon>
+          <small *ngIf="passField.errors && passField.touched" class="error">Парола е задължително поле</small>
+        </div>
+        <button class="main-btn">Вход</button>
+        <p>Нямаш акаунт? <a href="" routerLink="../register"> Регистрирай се тук</a></p>
+        <small class="error-box" *ngIf="error">{{error}}</small>
+      </div>
+    </form>
+  </div>
+</div>

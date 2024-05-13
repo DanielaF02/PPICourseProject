@@ -1,0 +1,18 @@
+<div class="layout">
+  <header>
+    <nav>
+      <img src="assets/images/logo.svg" alt="logo" routerLink="home">
+      <button (click)="showHighestRatedMovies()">Кой е най харесвания филм</button>
+      <div class="right">
+        <a href="" routerLink="home">Начало</a>
+        <button *ngIf="!loggedUser" routerLink="login">Вход</button>
+        <button *ngIf="!loggedUser" class="main-btn" routerLink="register">Регистрация</button>
+        <span *ngIf="loggedUser">{{loggedUser.name}}</span>
+        <button *ngIf="loggedUser" (click)="logout()">Излез</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <router-outlet />
+  </main>
+</div>

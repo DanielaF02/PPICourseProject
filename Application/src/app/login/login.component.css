@@ -1,0 +1,86 @@
+.login {
+  height: 100vh;
+  font-size: 24px;
+}
+
+.login-container {
+  display: flex;
+  height: 100%;
+}
+
+img {
+  width: 950px;
+  object-fit: cover;
+}
+
+form {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 50%;
+  margin-bottom: 6rem;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 0.5rem !important;
+}
+
+.form-field {
+  position: relative;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+input {
+  width: calc(100% - 48px);
+}
+
+button {
+  font-size: 24px;
+  width: 300px;
+  margin-top: auto;
+}
+
+.error {
+  font-size: 14px;
+  position: absolute;
+  color: red;
+  width: 100%;
+  text-align: center;
+}
+
+.has-error {
+  border-color: red;
+}
+
+a {
+  color: #EF1C23;
+}
+
+p {
+  text-align: center;
+}
+
+mat-icon {
+  position: absolute;
+  cursor: pointer;
+  top: 55%;
+  right: 6%;
+}
+
+.error-box {
+  position: absolute;
+  top: 85%;
+}
