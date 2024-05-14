@@ -1,0 +1,35 @@
+<div class="login">
+  <div class="login-container">
+    <img src="assets/images/loginImage.svg" alt="poster">
+    <form novalidate (ngSubmit)="register(f)" #f="ngForm">
+      <div class="form-container">
+        <h1>Регистрация</h1>
+        <div class="form-field">
+          <label for="email">Имейл</label>
+          <input type="email" id="email" name="email" placeholder="Въведете имейл"
+            [ngClass]="{ 'has-error': emailField.invalid && emailField.touched }"
+            [(ngModel)]="registerModel.email" #emailField="ngModel" required>
+          <small *ngIf="emailField.errors && emailField.touched" class="error">Имейл е задължително поле</small>
+        </div>
+        <div class="form-field">
+          <label for="name">Име</label>
+          <input type="text" id="name" name="name" placeholder="Въведете име"
+            [ngClass]="{ 'has-error': nameField.invalid && nameField.touched }"
+            [(ngModel)]="registerModel.name" #nameField="ngModel" required>
+          <small *ngIf="nameField.errors && nameField.touched" class="error">Име е задължително поле</small>
+        </div>
+        <div class="form-field">
+          <label for="pass">Парола</label>
+          <input [type]="passHidden ? 'password' : 'text'" id="pass" name="pass" placeholder="Въведете парола"
+            [ngClass]="{ 'has-error': passField.invalid && passField.touched }"
+            [(ngModel)]="registerModel.password" #passField="ngModel" required>
+          <mat-icon class="pos-abs pass-toggle pointer" (click)="passHidden = !passHidden">remove_red_eye</mat-icon>
+          <small *ngIf="passField.errors && passField.touched" class="error">Парола е задължително поле</small>
+        </div>
+        <button class="main-btn">Регистрация</button>
+        <p>Вече имаш акаунт? <a href="" routerLink="../login">Влез от тук</a></p>
+        <small class="error-box" *ngIf="error">{{error}}</small>
+      </div>
+    </form>
+  </div>
+</div>
