@@ -1,0 +1,25 @@
+<div class="review-page">
+  <div class="text">
+    <h1>Оценете ни!</h1>
+    <h3>Как бихте оценили вашето изживяване в нашата платформа?</h3>
+  </div>
+
+  <div class="emojis">
+    <img src="assets/images/bad.svg" alt="bad" (click)="selectedReview = 'bad'"
+      [ngClass]="{'selected-review': selectedReview === 'bad'}"
+      width="200" height="200">
+    <img src="assets/images/mid.svg" alt="mid" (click)="selectedReview = 'mid'"
+      [ngClass]="{'selected-review': selectedReview === 'mid'}"
+      width="200" height="200">
+    <img src="assets/images/good.svg" alt="good" (click)="selectedReview = 'good'"
+      [ngClass]="{'selected-review': selectedReview === 'good'}"
+      width="200" height="200">
+  </div>
+
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <textarea placeholder="Напиши нещо" [(ngModel)]="text" #textField="ngModel" name="text"></textarea>
+
+    <button class="main-btn">Изпрати</button>
+    <a href="" routerLink="home">Не, мерси!</a>
+  </form>
+</div>
