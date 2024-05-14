@@ -7,13 +7,13 @@
   <div class="emojis">
     <img src="assets/images/bad.svg" alt="bad" (click)="selectedReview = 'bad'"
       [ngClass]="{'selected-review': selectedReview === 'bad'}"
-      width="200" height="200">
+      width="80" height="80">
     <img src="assets/images/mid.svg" alt="mid" (click)="selectedReview = 'mid'"
       [ngClass]="{'selected-review': selectedReview === 'mid'}"
-      width="200" height="200">
+      width="80" height="80">
     <img src="assets/images/good.svg" alt="good" (click)="selectedReview = 'good'"
       [ngClass]="{'selected-review': selectedReview === 'good'}"
-      width="200" height="200">
+      width="80" height="80">
   </div>
 
   <form (ngSubmit)="onSubmit(f)" #f="ngForm">
