@@ -1,0 +1,53 @@
+<div class="reservation">
+  <section class="left-part" *ngIf="movie">
+    <h1>{{movie.title}} - ({{movie.hours}})</h1>
+    <div class="description">{{movie.description}}</div>
+    <div class="ticket-counter">
+      <div>
+        <div>Стандартен</div>
+        <input type="number" min="0" [max]="notReservedSeats" name="standardTickets" placeholder="Изберете брой стандартни билети"
+          [(ngModel)]="standardTickets" #standardTicketsField="ngModel" (input)="calcMaxSeats()" [disabled]="success">
+      </div>
+
+      <div>
+        <div>Студентски</div>
+        <input type="number" min="0" [max]="notReservedSeats" name="studentTickets" placeholder="Изберете брой студентски билети"
+          [(ngModel)]="studentTickets" #studentTicketsField="ngModel" (input)="calcMaxSeats()" [disabled]="success">
+      </div>
+    </div>
+  </section>
+
+  <section class="right-part" *ngIf="movie">
+    <h1>Екран</h1>
+    <img src="assets/images/screen.svg" alt="screen" width="500">
+
+    <div class="seats">
+      <img *ngFor="let seat of movie.seats; index as i"
+        (click)="reserveSeat(seat, i)"
+        [ngClass]="{ 'reserved': seat.reserved }"
+        width="80"
+        src="assets/images/seat.svg" [alt]="'seat' + i">
+    </div>
+
+    <button class="main-btn" #buyBtn disabled (click)="finishPurchase()">Купи</button>
+  </section>
+</div>
+
+<div class="centerer" *ngIf="success">
+  <div class="success">
+    Поздравления вие закупихте
+    <span *ngIf="standardTickets > 0">
+      {{standardTickets}}
+      <span *ngIf="standardTickets == 1">стандартен билет</span>
+      <span *ngIf="standardTickets > 1">стандартни билети</span>
+    </span>
+  
+    <span *ngIf="studentTickets > 0">
+      {{studentTickets}}
+      <span *ngIf="studentTickets == 1">студентски билет</span>
+      <span *ngIf="studentTickets > 1">студентски билети</span>
+    </span>
+    за филма {{movie.title}}.
+  </div>
+  <div><a href="" routerLink="../../review">Как се справихме ?</a></div>
+</div>

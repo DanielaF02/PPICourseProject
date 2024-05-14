@@ -1,0 +1,78 @@
+.reservation {
+  width: calc(100% - 4rem);
+  display: flex;
+  justify-content: center;
+  padding-inline: 2rem;
+  color: black;
+}
+
+.left-part {
+  width: 700px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 20px;
+  width: 500px;
+}
+
+.ticket-counter {
+  margin-top: 2rem;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input {
+  margin: 5px;
+}
+
+.right-part {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.seats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.reserved {
+  opacity: 0.6;
+}
+
+.notReserved {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.centerer {
+  display: grid;
+  place-items: center;
+  margin-top: 1rem;
+}
+
+.success {
+  text-align: center;
+  border: 1px solid #248f24;
+  color: #248f24;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  background-color: #c2f0c2;
+  width: fit-content;
+}
+
+a {
+  margin-top: 10px;
+}
