@@ -1,0 +1,10 @@
+<div class="card">
+  <img [src]="movie.poster" alt="poster" width="288" height="232">
+  <div class="text-part">
+    <h2>{{movie.title}}</h2>
+    <span class="genre">{{movie.genre.join(', ')}} | {{movie.duration}}</span>
+
+    <div class="type">{{movie.type}}</div>
+    <button (click)="openMovieReservePage()">{{movie.hours}}</button>
+  </div>
+</div>

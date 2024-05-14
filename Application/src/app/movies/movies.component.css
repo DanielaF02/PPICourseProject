@@ -1,0 +1,49 @@
+.main-container {
+  overflow: auto;
+  height: calc(100vh - 64px);
+}
+
+.main-section {
+  position: relative;
+  color: white;
+}
+
+img[alt="poster"] {
+  width: 100%;
+}
+
+.text-part {
+  position: absolute;
+  top: 50px;
+  left: 56px;
+}
+
+h1 {
+  font-size: 72px;
+  max-width: 480px;
+  margin: 0 !important;
+}
+
+.description {
+  margin-block: 26px;
+  max-width: 450px;
+  font-size: 20px;
+  color: #FDFCFC;
+}
+
+.main-btn {
+  width: 300px;
+  font-size: 24px;
+}
+
+.movies-section {
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: 610px 610px;
+  gap: 2rem;
+}

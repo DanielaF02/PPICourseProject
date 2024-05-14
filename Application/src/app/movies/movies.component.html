@@ -1,0 +1,20 @@
+<div class="main-container">
+  <section class="main-section" *ngIf="bestMovie">
+    <img [src]="bestMovie.poster" alt="poster">
+
+    <div class="text-part">
+      <h1>Гледай най-новият филм сега</h1>
+      <div class="description">{{bestMovie.description}}</div>
+      <button class="main-btn" (click)="openMovieReservePage()">Купи</button>
+    </div>
+  </section>
+
+  <section class="movies-section">
+    <div class="movies-grid">
+      <app-movie-card
+        *ngFor="let movie of movies; trackBy: trackByFn"
+        [movie]="movie"
+      />
+    </div>
+  </section>
+</div>
